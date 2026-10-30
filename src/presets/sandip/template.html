@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}} | {{author}}</title>
+    <meta name="description" content="{{description}}">
+    <link rel="icon" href="../favicon.ico" sizes="any">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600|Lato:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <!-- SEO -->
+    <meta name="author" content="{{author}}">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="{{canonical}}">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="{{siteName}}">
+    <meta property="og:title" content="{{title}}">
+    <meta property="og:description" content="{{description}}">
+    <meta property="og:url" content="{{canonical}}">
+    <meta property="og:image" content="{{ogImage}}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="article:published_time" content="{{date}}">
+    <meta property="article:author" content="{{author}}">
+    <meta property="article:section" content="{{tag}}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{title}}">
+    <meta name="twitter:description" content="{{description}}">
+    <meta name="twitter:image" content="{{ogImage}}">
+    <script type="application/ld+json">{{jsonld}}</script>
+    <!-- /SEO -->
+</head>
+<body>
+    <header class="site-header">
+        <div class="bar">
+            <a class="brand" href="../index.html" aria-label="Blog home"><img src="../images/llogo.png" alt="{{author}}"></a>
+            <nav class="site-nav" aria-label="Main">
+                <a class="active" href="../index.html">Blog</a>
+                <a href="{{authorUrl}}" target="_blank" rel="noopener noreferrer">Portfolio</a>
+                <a class="cta" href="{{authorUrl}}/#contact" target="_blank" rel="noopener noreferrer">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="post-hero">
+        <div class="inner">
+            <a class="back" href="../index.html">&larr; All posts</a>
+            <div class="meta"><span class="tag">{{tag}}</span><span>{{dateDisplay}}</span><span>{{readTime}} min read</span></div>
+            <h1>{{title}}</h1>
+        </div>
+    </section>
+
+    <article class="article">
+        {{content}}
+        <hr>
+        <div class="post-footer">
+            <a class="btn" href="../index.html">&larr; All posts</a>
+            <a class="btn" href="{{authorUrl}}/#contact" target="_blank" rel="noopener noreferrer">Get in touch</a>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <img src="../images/llogo.png" alt="{{author}}">
+        <nav aria-label="Footer">
+            <a href="../index.html">Blog</a>
+            <a href="{{authorUrl}}" target="_blank" rel="noopener noreferrer">Portfolio</a>
+            <a href="{{authorUrl}}/#contact" target="_blank" rel="noopener noreferrer">Contact</a>
+        </nav>
+        <small>&copy; {{year}} {{author}}. All rights reserved.</small>
+    </footer>
+</body>
+</html>
